@@ -7,8 +7,26 @@
 - 商品情報をジャンルに分けてフィルタリングします
 - 現在地から特定の範囲のみの情報を表示する
 
+## UI
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+
 ### 使用プラットフォーム
 webブラウザ
 
 ### 開発言語
-JavaScript
+JavaScript  
+> フレームワークでReactを使用
+
+## 起動方法
+まずはこのリポジトリをCloneもしくはforkしてください
+- Clone  
+`git clone https://github.com/daikimare/atsutoku.git`
+
+- fork  
+[GitHub](https://github.com/daikimare/atsutoku.git)へ移動し右上のforkを押してください。それ以降はCloneとおなしです。
+
+リポジトリをローカル環境に取り込めましたら起動します。
+- `npm start`
+- `yarn start`  
+
+以上のいずれかを実行してください。
