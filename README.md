@@ -8,7 +8,8 @@
 - 現在地から特定の範囲のみの情報を表示する
 
 ### UI
-＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+figmaで作成したものを参照してください。  
+[こちら](https://www.figma.com/file/iXiwjDNgdgQj4xUEnlwIVc/Atsutoku-UI?node-id=14%3A8)
 
 ### 使用プラットフォーム
 webブラウザ
