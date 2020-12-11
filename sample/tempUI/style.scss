@@ -1,0 +1,143 @@
+@charset "utf-8";
+//web-font
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+//px to rem
+$html-font-size: 16px;
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+//box-sizing
+* {
+  box-sizing: border-box;
+}
+
+//font-family
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100vw;
+  display: flex;
+}
+
+//header
+.header {
+  height: 100px;
+  background-color: #69c9ff;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  &__inner {
+    display: flex;
+  }
+  &__logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    &__title {
+      font-size: 50px;
+      text-decoration: none;
+      color: #fff;
+      margin-left: 8px;
+      font-weight: bold;
+    }
+    &__img {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+//container
+
+.container {
+  padding-top: 100px;
+  width: 100%;
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+//card
+.card-wrapper {
+  width: 50%;
+  padding: 40px 0 0 40px;
+  margin: 0 auto;
+}
+
+.card {
+  height: rem(215);
+  width: rem(640);
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
+  border-radius: 10px;
+  display: flex;
+
+  &__img {
+    width: rem(215);
+    img {
+      border-radius: 10px 0 0 10px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    width: 100%;
+    &__shop {
+      line-height: rem(215);
+      font-size: rem(40);
+      text-align: center;
+      width: 100%;
+    }
+    &__distance {
+      font-size: rem(30);
+      color: #696969;
+      position: relative;
+      top: rem(-50);
+      left: rem(320);
+      display: inline-block;
+    }
+  }
+}
+
+//media query
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 670px) {
+  .card-wrapper {
+    width: 100%;
+    padding: 30px 0 0 30px;
+  }
+  html {
+    font-size: 14px;
+  }
+}

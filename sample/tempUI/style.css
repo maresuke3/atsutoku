@@ -1,0 +1,150 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  height: 100px;
+  background-color: #69c9ff;
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__logo {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 8px;
+}
+
+.header__logo__title {
+  font-size: 50px;
+  text-decoration: none;
+  color: #fff;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.header__logo__img {
+  width: 64px;
+  height: 64px;
+}
+
+.container {
+  padding-top: 100px;
+  width: 100%;
+  background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card-wrapper {
+  width: 50%;
+  padding: 40px 0 0 40px;
+  margin: 0 auto;
+}
+
+.card {
+  height: 13.4375rem;
+  width: 40rem;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
+          box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__img {
+  width: 13.4375rem;
+}
+
+.card__img img {
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__text {
+  width: 100%;
+}
+
+.card__text__shop {
+  line-height: 13.4375rem;
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.card__text__distance {
+  font-size: 1.875rem;
+  color: #696969;
+  position: relative;
+  top: -3.125rem;
+  left: 20rem;
+  display: inline-block;
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 670px) {
+  .card-wrapper {
+    width: 100%;
+    padding: 30px 0 0 30px;
+  }
+  html {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
