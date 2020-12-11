@@ -16,17 +16,36 @@
 </style>
 </head>
 <header>
+    /*ドロワーメニュー*/
     <table class="menu">
         <tr>
             <td width: 20%>
                 <button type="button" class="btn_menu"><img src="images/three-lines-removebg-preview.png" class="lines"></button>
                 <nav>
                 <ul>
-                <li><a href="/">メニュー1</a></li>
-                <li><a href="/">メニュー2</a></li>
-                <li><a href="/">メニュー3</a></li>
-                <li><a href="/">メニュー4</a></li>
-                <li><a href="/">メニュー5</a></li>
+                <li>
+                    <form>
+                        <p class="select">検索範囲</p>
+                        <select name="number">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                    </form>
+                </li>
+                <li>
+                    <form>
+                        <p class="select">ジャンル</p>
+                        <select name="genre">
+                            <option value="fashion"selected>ファッション</option>
+                            <option value="cosme">コスメ</option>
+                            <option value="homeapp" >家電</option>
+                            <option value="goods">雑貨</option>
+                          </select>
+                    </form>
+                </li>
                 </ul>
                 </nav>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
