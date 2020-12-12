@@ -60,13 +60,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 //card
 .card-wrapper {
-  padding: 40px 0 0 50px;
+  padding: 45px 0 0 70px;
 }
 
 .card {
@@ -109,31 +109,31 @@ body {
 }
 
 //media query
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
   html {
     font-size: 14px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1340px) {
   html {
     font-size: 12px;
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1170px) {
   html {
     font-size: 10px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   html {
     font-size: 8px;
   }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 800px) {
   .card-wrapper {
     width: 100%;
     padding: 30px 0 0 30px;
