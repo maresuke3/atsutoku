@@ -27,6 +27,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 12px;
 }
 
 .header__logo {
@@ -37,15 +38,20 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100px;
-  margin-left: 8px;
 }
 
 .header__logo__title {
-  margin-left: 8px;
+  margin-left: 10px;
   font-size: 50px;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.header__logo__title:hover {
+  opacity: 0.8;
 }
 
 .header__logo__img {

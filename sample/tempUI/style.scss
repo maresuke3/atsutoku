@@ -32,18 +32,22 @@ body {
   background-color: #69c9ff;
   &__inner {
     display: flex;
+    padding: 0 12px;
   }
   &__logo {
     display: flex;
     align-items: center;
     height: 100px;
-    margin-left: 8px;
     &__title {
-      margin-left: 8px;
+      margin-left: 10px;
       font-size: 50px;
       font-weight: bold;
       color: #fff;
       text-decoration: none;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.8;
+      }
     }
     &__img {
       width: 64px;
