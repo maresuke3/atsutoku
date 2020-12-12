@@ -212,6 +212,10 @@ body {
   .custom-select {
     display: none;
   }
+  .header__logo {
+    position: relative;
+    left: calc(50% - 130px);
+  }
 }
 
 @media (max-width: 1000px) {
