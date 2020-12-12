@@ -16,11 +16,11 @@ body {
 }
 
 .header {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
   height: 100px;
   background-color: #69c9ff;
-  position: fixed;
-  width: 100%;
-  z-index: 500;
 }
 
 .header__inner {
@@ -30,22 +30,22 @@ body {
 }
 
 .header__logo {
-  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100px;
   margin-left: 8px;
 }
 
 .header__logo__title {
-  font-size: 50px;
-  text-decoration: none;
-  color: #fff;
   margin-left: 8px;
+  font-size: 50px;
   font-weight: bold;
+  color: #fff;
+  text-decoration: none;
 }
 
 .header__logo__img {
@@ -54,8 +54,6 @@ body {
 }
 
 .container {
-  padding-top: 100px;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +61,9 @@ body {
       flex-wrap: wrap;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  width: 100%;
   max-width: 1500px;
+  padding-top: 100px;
   margin: 0 auto;
 }
 
@@ -72,16 +72,16 @@ body {
 }
 
 .card {
-  height: 13.4375rem;
-  width: 40rem;
-  background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
-          box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
-  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 40rem;
+  height: 13.4375rem;
   cursor: pointer;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
+          box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -95,8 +95,8 @@ body {
 }
 
 .card__img img {
-  border-radius: 10px 0 0 10px;
   height: 100%;
+  border-radius: 10px 0 0 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -106,19 +106,19 @@ body {
 }
 
 .card__text__shop {
-  line-height: 13.4375rem;
-  font-size: 2.5rem;
-  text-align: center;
   width: 100%;
+  font-size: 2.5rem;
+  line-height: 13.4375rem;
+  text-align: center;
 }
 
 .card__text__distance {
-  font-size: 1.875rem;
-  color: #696969;
   position: relative;
   top: -3.125rem;
   left: 20rem;
   display: inline-block;
+  font-size: 1.875rem;
+  color: #696969;
 }
 
 @media (max-width: 1440px) {
