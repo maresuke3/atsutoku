@@ -14,13 +14,13 @@ $html-font-size: 16px;
 //box-sizing
 * {
   box-sizing: border-box;
+  appearance: none;
+  text-size-adjust: 100%;
 }
 
 //font-family
 body {
   font-family: 'Noto Sans JP', sans-serif;
-  width: 100vw;
-  display: flex;
 }
 
 //header
@@ -57,7 +57,6 @@ body {
 .container {
   padding-top: 100px;
   width: 100%;
-  background-color: #eee;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -67,9 +66,7 @@ body {
 
 //card
 .card-wrapper {
-  width: 50%;
-  padding: 40px 0 0 40px;
-  margin: 0 auto;
+  padding: 40px 0 0 50px;
 }
 
 .card {
@@ -79,7 +76,11 @@ body {
   box-shadow: rgba(0, 0, 0, 0.25) 5px 5px 25px;
   border-radius: 10px;
   display: flex;
-
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
   &__img {
     width: rem(215);
     img {
