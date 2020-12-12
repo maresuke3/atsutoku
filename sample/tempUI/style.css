@@ -27,7 +27,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 12px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 100px;
+  padding-left: 12px;
 }
 
 .header__logo {
@@ -57,6 +61,85 @@ body {
 .header__logo__img {
   width: 64px;
   height: 64px;
+}
+
+.header__nav {
+  height: 100px;
+}
+
+.header__nav__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 800px;
+  /* The container must be positioned relative: */
+  /* Style the arrow inside the select element: */
+  /* Point the arrow upwards when the select box is open (active): */
+  /* style the items (options), including the selected item: */
+  /* Style items (options): */
+  /* Hide the items when the select box is closed: */
+}
+
+.header__nav__inner .custom-select {
+  position: relative;
+  font-size: 30px;
+  line-height: 82px;
+}
+
+.header__nav__inner .custom-select select {
+  display: none;
+  /*hide original SELECT element: */
+  color: #fff;
+}
+
+.header__nav__inner .select-selected {
+  color: #fff;
+}
+
+.header__nav__inner .select-selected::after {
+  position: absolute;
+  top: 47px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 10px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.header__nav__inner .select-selected.select-arrow-active::after {
+  top: 34px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.header__nav__inner .select-items div,
+.header__nav__inner .select-selected {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+}
+
+.header__nav__inner .select-items {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  color: #000;
+  background-color: #fff;
+  border: #eee 2px solid;
+}
+
+.header__nav__inner .select-hide {
+  display: none;
+}
+
+.header__nav__inner .select-items div:hover,
+.header__nav__inner .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -147,6 +230,9 @@ body {
 @media (max-width: 1170px) {
   html {
     font-size: 10px;
+  }
+  .custom-select {
+    display: none;
   }
 }
 
