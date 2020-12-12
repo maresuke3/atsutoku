@@ -286,7 +286,7 @@ body {
 
 //card
 .card-wrapper {
-  padding: 45px 0 0 70px;
+  padding: rem(45) 0 0 rem(70);
   a {
     color: #000;
     text-decoration: none;
@@ -340,19 +340,19 @@ body {
 //media query
 @media (max-width: 1440px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 @media (max-width: 1340px) {
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 1170px) {
+@media (max-width: 1270px) {
   html {
-    font-size: 10px;
+    font-size: 13px;
   }
   .header__nav {
     display: none;
@@ -366,12 +366,34 @@ body {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1190px) {
   html {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
+@media (max-width: 1105px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1030px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 950px) {
+  html {
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 905px) {
+  html {
+    font-size: 9px;
+  }
+}
 @media (max-width: 800px) {
   .card-wrapper {
     width: 100%;
