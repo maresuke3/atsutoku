@@ -71,6 +71,11 @@ body {
   padding: 45px 0 0 70px;
 }
 
+.card-wrapper a {
+  color: #000;
+  text-decoration: none;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
