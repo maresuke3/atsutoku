@@ -3,7 +3,7 @@ img{
     width: 200;
     height: 200;
 }
-.name{
+.td{
     font-size: 50px;
 }
 body{
@@ -16,7 +16,8 @@ body{
 }
 .table tr    {
     border:5px solid #000000;
-    padding: 12px;
+    padding: 0px;
+    margin-bottom: 100px;
 }
 
 /*ドロワーメニュー*/
@@ -75,7 +76,10 @@ nav ul li a {
     width: 150px;
 }
 header{
-  position: fixed;
+  /* position: fixed; */
+  height: 120px;
+  background-color: teal;
+  margin-bottom: 10px;
 }
 .top{
   font-size: 70px;
