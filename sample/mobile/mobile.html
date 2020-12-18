@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AtuToku</title>
+<link rel="stylesheet" href="mobile.css">
+<style>
+    .images{
+        width: 300px;
+        height: 300px;
+    }
+    .lines{
+        width: 100px;
+        height: 100px;
+    }
+</style>
+</head>
+<header>
+    <!--ドロワーメニュー-->
+    <table class="menu">
+        <tr>
+            <td width: 20%>
+                <button type="button" class="btn_menu"><img src="images/three-lines-removebg-preview.png" class="lines"></button>
+                <nav>
+                <ul>
+                <li>
+                    <form>
+                        <p class="select">検索範囲(km)</p>
+                        <input type="number" min="0" step="0.1">
+                    </form>
+                </li>
+                <li>
+                    <form>
+                        <p class="select">ジャンル</p>
+                        <select name="genre">
+                            <option value="fashion"selected>ファッション</option>
+                            <option value="cosme">コスメ</option>
+                            <option value="homeapp" >家電</option>
+                            <option value="goods">雑貨</option>
+                          </select>
+                    </form>
+                </li>
+                </ul>
+                </nav>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script>
+                $(function(){
+                $('.btn_menu').click(function(){
+                $('nav').toggleClass('open');}
+                );
+                })
+                </script>
+            </td>
+            <td class="top" width: 80% cellpadding-left="1000px">
+                AtuToku
+            </td>
+        </tr>
+    </table>
+</header>
+<body>
+<table class="table">
+    <div class="tr">
+        <tr>
+        <div class="td"><td><img src="images/GU_logo.svg.png" class="images"></td></div>
+        <div class="td"><td>GU 野々市店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/uniqlo-logo2.png" class="images"></td></div>
+            <div class="td"><td>UNIQLO 野々市店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/wego.png" class="images"></td></div>
+            <div class="td"><td>WEGO 野々市店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/GU_logo.svg.png" class="images"></td></div>
+            <div class="td"><td>GU 金沢店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/uniqlo-logo2.png" class="images"></td></div>
+            <div class="td"><td>UNIQLO 金沢店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/wego.png" class="images"></td></div>
+            <div class="td"><td>WEGO 金沢店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/GU_logo.svg.png" class="images"></div></td></div>
+            <div class="td"><td>GU 野々市店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/uniqlo-logo2.png" class="images"></td></div>
+            <div class="td"><td>UNIQLO 野々市店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/wego.png" class="images"></td></div>
+            <div class="td"><td>WEGO 野々市店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/GU_logo.svg.png" class="images"></td></div>
+            <div class="td"><td>GU 金沢店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/uniqlo-logo2.png" class="images"></td></div>
+            <div class="td"><td>UNIQLO 金沢店</td></div>
+        </tr>
+    </div>
+    <div class="tr">
+        <tr>
+            <div class="td"><td><img src="images/wego.png" class="images"></td></div>
+            <div class="td"><td>WEGO 金沢店</td></div>
+        </tr>
+    </div>
+</table>
+</body>
+</html>
