@@ -26,8 +26,12 @@ JavaScript
 - fork  
 [GitHub](https://github.com/daikimare/atsutoku.git)へ移動し右上のforkを押してください。それ以降はCloneとおなしです。
 
-リポジトリをローカル環境に取り込めましたら起動します。
-- `npm start`
-- `yarn start`  
+リポジトリをローカル環境に取り込めましたらパッケージをインストールした後に起動します。
+- パッケージのインストール  
+npmユーザ：`npm install`  
+yarnユーザ：`yarn`
 
-以上のいずれかを実行してください。
+- 起動  
+`npm start`  
+`yarn start`  
+
