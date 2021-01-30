@@ -40,7 +40,7 @@
     color: white;
 }
 
-.menu ul li {
+.menu .menu-list .menu-contents {
     position: relative;
     float: left;
     list-style: none;
