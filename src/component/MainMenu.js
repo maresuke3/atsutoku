@@ -17,7 +17,7 @@ export default function MainMenu() {
 
     return(
         <ul className="menu-list">
-            <li className="genru-area">
+            <li className="menu-contents">
                 <select className="list-genru" onChange={changeGenru}>
                     <option value="null">ジャンル</option>
                     <option value="food"> 食べ物</option>
@@ -27,7 +27,7 @@ export default function MainMenu() {
                 </select>
                 <div className="current-genru">{genru}</div>
             </li>
-            <li className="distance-area">
+            <li className="menu-contents">
                 <select className="list-distance" onChange={changeDistance}>
                     <option value="null">検索範囲</option>
                     <option value="0.5">500m</option>
