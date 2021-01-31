@@ -58,3 +58,25 @@ select {
     font-weight: bold;
     font-size: 30px;
 }
+
+
+
+.detailList .detail-contents {
+    position: flex;
+    display: flex;
+}
+
+.detailList .detail-contents li{
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.detailList .detail-contents .shopName {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 30rem;
+    text-align: center;
+}
