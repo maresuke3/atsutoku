@@ -26,15 +26,13 @@ class Card extends Component {
   render() {
     return (
         <div>
-            {data.map((value) =>(
-                <div className="container">
+            <div className="container">
+                {data.map((value) =>(
                     <div className="card-wrapper">
                         <a href="#">
                             <div className="card">
                                 <div className="card__img">
-                                    {/* <img src={Matsuya} alt="matsuya"/> */}
                                     <img src={value.img} alt={value.alt} />
-                                    {/* <img src={require(value.img)} alt={value.alt}/> */}
                                 </div>
                                 <div className="card__text">
                                     <p className="card__text__shop">{value.shop}</p>
@@ -43,8 +41,8 @@ class Card extends Component {
                             </div>
                         </a>
                     </div>
-                </div>
-            ))}   
+                 ))}   
+           </div>          
         </div>
     )
   }
