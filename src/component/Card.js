@@ -9,6 +9,7 @@ import Sukiya from './img/sukiya.png';
 import Wego from './img/wego.png';
 import Earth from './img/earth.jpg';
 import GU from './img/GU.png';
+
 let data = [
     {img: Matsuya, alt:'matsuya', shop:'松屋金沢工大前店', distance:0.3},
     {img: Donut, alt:'donut', shop:'ミスタードーナツ野々市ショップ', distance:1.9},
@@ -21,29 +22,26 @@ let data = [
     {img: GU, alt:'GU', shop:'GU イオンタウン金沢示野店', distance:8.3}
 ];
 
-
 class Card extends Component {
   render() {
-    return (
-        <div>
-            <div className="container">
-                {data.map((value) =>(
-                    <div className="card-wrapper">
-                        <a href="#">
-                            <div className="card">
-                                <div className="card__img">
-                                    <img src={value.img} alt={value.alt} />
-                                </div>
-                                <div className="card__text">
-                                    <p className="card__text__shop">{value.shop}</p>
-                                    <p className="card__text__distance">{value.distance}km</p>
-                                </div>
+    return (       
+        <div className="container">
+            {data.map((value) =>(
+                <div className="card-wrapper">
+                    <a href="#">
+                        <div className="card">
+                            <div className="card__img">
+                                <img src={value.img} alt={value.alt} />
                             </div>
-                        </a>
-                    </div>
-                 ))}   
-           </div>          
-        </div>
+                            <div className="card__text">
+                                <p className="card__text__shop">{value.shop}</p>
+                                <p className="card__text__distance">{value.distance}km</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                ))}   
+        </div>          
     )
   }
 }
