@@ -77,10 +77,19 @@ app.get('/', function (req, res) {
 app.get('/api/uniqlo/men', (req, res) => {
   (async () => {
     const start = Date.now(); // 処理時間の計測用
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+      ],
+    });
     const page = await browser.newPage();
 
-    //不要なリソースをフィルタリング
+    //不要なリソースを abort
     await page.setRequestInterception(true);
     page.on('request', (request) => {
       if (
@@ -90,6 +99,7 @@ app.get('/api/uniqlo/men', (req, res) => {
           'eventsource',
           'websocket',
           'manifest',
+          'other',
           'media',
           'font',
         ].includes(request.resourceType())
@@ -125,10 +135,19 @@ app.get('/api/uniqlo/men', (req, res) => {
 app.get('/api/uniqlo/women', (req, res) => {
   (async () => {
     const start = Date.now(); // 処理時間の計測用
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+      ],
+    });
     const page = await browser.newPage();
 
-    //不要なリソースをフィルタリング
+    //不要なリソースを abort
     await page.setRequestInterception(true);
     page.on('request', (request) => {
       if (
@@ -138,6 +157,7 @@ app.get('/api/uniqlo/women', (req, res) => {
           'eventsource',
           'websocket',
           'manifest',
+          'other',
           'media',
           'font',
         ].includes(request.resourceType())
