@@ -189,5 +189,66 @@ app.get('/api/uniqlo/women', (req, res) => {
   })();
 });
 
+//earth
+app.get('/api/earth', (req, res) => {
+  (async () => {
+    const start = Date.now(); // 処理時間の計測用
+    const browser = await puppeteer.launch({
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+      ],
+    });
+    const page = await browser.newPage();
+
+    //不要なリソースを abort
+    await page.setRequestInterception(true);
+    page.on('request', (request) => {
+      if (
+        [
+          'fetch',
+          'texttrack',
+          'eventsource',
+          'websocket',
+          'manifest',
+          'other',
+          'media',
+          'font',
+          'image',
+          'stylesheet',
+        ].includes(request.resourceType())
+      ) {
+        request.abort();
+      } else {
+        request.continue();
+      }
+    });
+
+    const titleSelector = 'span.item-name';
+    const anchorSelector = '#itemContainer > li > a';
+    const imgSelector = 'span.item-photo > img';
+    const priceSelector = '.price.sale';
+    const url =
+      'https://stripe-club.com/ap/s/s/CC010?sclses=n_sale+OR+sclses:n_pre';
+    const newsArray = await getData(
+      page,
+      url,
+      titleSelector,
+      anchorSelector,
+      imgSelector,
+      priceSelector
+    );
+
+    await browser.close();
+
+    await res.json(newsArray);
+    console.log('Took', Date.now() - start, 'ms');
+  })();
+});
+
 //listen port
 app.listen(process.env.PORT || 8080);
