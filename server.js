@@ -125,7 +125,6 @@ app.get('/api/uniqlo/men', (req, res) => {
     );
 
     await browser.close();
-
     await res.json(newsArray);
     console.log('Took', Date.now() - start, 'ms');
   })();
@@ -183,7 +182,6 @@ app.get('/api/uniqlo/women', (req, res) => {
     );
 
     await browser.close();
-
     await res.json(newsArray);
     console.log('Took', Date.now() - start, 'ms');
   })();
@@ -234,6 +232,7 @@ app.get('/api/earth', (req, res) => {
     const priceSelector = '.price.sale';
     const url =
       'https://stripe-club.com/ap/s/s/CC010?sclses=n_sale+OR+sclses:n_pre';
+
     const newsArray = await getData(
       page,
       url,
@@ -244,7 +243,6 @@ app.get('/api/earth', (req, res) => {
     );
 
     await browser.close();
-
     await res.json(newsArray);
     console.log('Took', Date.now() - start, 'ms');
   })();
