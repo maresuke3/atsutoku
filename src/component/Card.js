@@ -23,27 +23,27 @@ let data = [
 ];
 
 class Card extends Component {
-  render() {
-    return (       
-        <div className="container">
-            {data.map((value) =>(
-                <div className="card-wrapper">
-                    <a href="#">
-                        <div className="card">
-                            <div className="card__img">
-                                <img src={value.img} alt={value.alt} />
+    render() {
+        return (       
+            <div className="container">
+                {data.map((value) =>(
+                    <div className="card-wrapper">
+                        <a href="#">
+                            <div className="card">
+                                <div className="card__img">
+                                    <img src={value.img} alt={value.alt} />
+                                </div>
+                                <div className="card__text">
+                                    <p className="card__text__shop">{value.shop}</p>
+                                    <p className="card__text__distance">{value.distance}km</p>
+                                </div>
                             </div>
-                            <div className="card__text">
-                                <p className="card__text__shop">{value.shop}</p>
-                                <p className="card__text__distance">{value.distance}km</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                ))}   
-        </div>          
-    )
-  }
+                        </a>
+                    </div>
+                    ))}   
+            </div>          
+        )
+    }
 }
 
 export default Card;
