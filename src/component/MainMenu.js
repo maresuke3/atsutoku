@@ -45,7 +45,7 @@ export default function MainMenu () {
     useEffect(() => {
         /* getCurrentPositionの第一引数が現在地を取得できた際に走り、第二引数が現在地情報取得拒否またはエラーが出た時に走る */
         navigator.geolocation.getCurrentPosition(getPosition, unfindPosition)
-    },[])
+    }, [])
 
     console.log(center)
 
