@@ -1,54 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import './css/header.css';
+import React, { useState, useEffect } from 'react'
+import './css/header.css'
 
-export default function MainMenu() {
-    
+export default function MainMenu () {
     /* ドロップダウンselecter */
     /* ジャンル選択をstateで管理 */
-    const [genru, setGenru] = useState('null');
+    const [genru, setGenru] = useState('null')
     const changeGenru = event => {
-        setGenru(event.target.value);
+        setGenru(event.target.value)
     }
 
     /* 検索範囲の距離をstateで管理 */
-    const [distance, setDistance] = useState(0);
+    const [distance, setDistance] = useState(0)
     const changeDistance = event => {
-        setDistance(event.target.value);
+        setDistance(event.target.value)
     }
 
     /* 範囲検索機能 */
     /* 中心座標を取得する */
-    const [center, setCenter] = useState()              //中心座標をstateで管理する
+    const [center, setCenter] = useState() /* 中心座標をstateで管理する */
 
     /* 中心座標を取得できた際に走るメソッド */
     const getPosition = data => {
         const currentPosition = {
             lat: data.coords.latitude,
             lng: data.coords.longitude
-        };
-        setCenter(currentPosition);
-        console.log(center);
+        }
+        setCenter(currentPosition)
+        console.log(center)
     }
 
     /* 中心座標が取得できなかった際に走るメソッド */
+    const defaultLatitude = 34.673542
+    const defaultLongitude = 135.43338
     const unfindPosition = data => {
         const currentPosition = {
-            lat: 34.673542,
-            lng: 135.43338
-        };
-        setCenter(currentPosition);
-        console.log(center);
+            lat: defaultLatitude,
+            lng: defaultLongitude
+        }
+        setCenter(currentPosition)
+        console.log(center)
     }
 
     /* geolvationによる現在地の座標を取得 */
     useEffect(() => {
         /* getCurrentPositionの第一引数が現在地を取得できた際に走り、第二引数が現在地情報取得拒否またはエラーが出た時に走る */
-        navigator.geolocation.getCurrentPosition(getPosition, unfindPosition);
-    },[]) ;
+        navigator.geolocation.getCurrentPosition(getPosition, unfindPosition)
+    },[])
 
-    
-    
-    return(
+    console.log(center)
+
+    return (
         <ul className="menu-list">
             <li className="menu-contents">
                 <select className="list-genru" onChange={changeGenru}>
