@@ -115,7 +115,7 @@ app.get('/api/uniqlo/men', (req, res) => {
     const imgSelector = '.uq-uikit-image > img';
     const priceSelector = '.uq-uikit-price-text';
     const url = 'https://www.uniqlo.com/jp/ja/feature/limited-offers/men';
-    const newsArray = await getData(
+    const dataArr = await getData(
       page,
       url,
       titleSelector,
@@ -125,7 +125,7 @@ app.get('/api/uniqlo/men', (req, res) => {
     );
 
     await browser.close();
-    await res.json(newsArray);
+    await res.json(dataArr);
     console.log('Took', Date.now() - start, 'ms');
   })();
 });
@@ -172,7 +172,7 @@ app.get('/api/uniqlo/women', (req, res) => {
     const imgSelector = '.uq-uikit-image > img';
     const priceSelector = '.uq-uikit-price-text';
     const url = 'https://www.uniqlo.com/jp/ja/feature/limited-offers/women';
-    const newsArray = await getData(
+    const dataArr = await getData(
       page,
       url,
       titleSelector,
@@ -182,7 +182,7 @@ app.get('/api/uniqlo/women', (req, res) => {
     );
 
     await browser.close();
-    await res.json(newsArray);
+    await res.json(dataArr);
     console.log('Took', Date.now() - start, 'ms');
   })();
 });
@@ -233,7 +233,7 @@ app.get('/api/earth', (req, res) => {
     const url =
       'https://stripe-club.com/ap/s/s/CC010?sclses=n_sale+OR+sclses:n_pre';
 
-    const newsArray = await getData(
+    const dataArr = await getData(
       page,
       url,
       titleSelector,
@@ -243,7 +243,133 @@ app.get('/api/earth', (req, res) => {
     );
 
     await browser.close();
-    await res.json(newsArray);
+    await res.json(dataArr);
+    console.log('Took', Date.now() - start, 'ms');
+  })();
+});
+
+//GU (MEN)
+app.get('/api/gu/men', (req, res) => {
+  (async () => {
+    const start = Date.now(); // 処理時間の計測用
+    const browser = await puppeteer.launch({
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+      ],
+    });
+    const page = await browser.newPage();
+
+    //不要なリソースを abort
+    await page.setRequestInterception(true);
+    page.on('request', (request) => {
+      if (
+        [
+          // 'fetch',
+          'xhr',
+          // 'script',
+          'texttrack',
+          'eventsource',
+          'websocket',
+          'manifest',
+          'other',
+          'media',
+          'font',
+          // 'image',
+          'stylesheet',
+        ].includes(request.resourceType())
+      ) {
+        request.abort();
+      } else {
+        request.continue();
+      }
+    });
+
+    const titleSelector = '.sc-150v5lj-0.hbRPmC';
+    const anchorSelector = '.sc-2695pe-0.fJifex > .sc-1kpyy02-0.ksxvFG > a';
+    const imgSelector = '.sc-1dphr7g-1.gjJgmD > img';
+    const priceSelector = '.sc-150v5lj-0.yfgtrh-0.kLLSiB';
+    const url =
+      'https://www.gu-global.com/jp/ja/category/men?page=1&saleTypes=price_down&sortOption=release_desc';
+
+    const dataArr = await getData(
+      page,
+      url,
+      titleSelector,
+      anchorSelector,
+      imgSelector,
+      priceSelector
+    );
+
+    await browser.close();
+    await res.json(dataArr);
+    console.log('Took', Date.now() - start, 'ms');
+  })();
+});
+
+//GU (WOMEN)
+app.get('/api/gu/women', (req, res) => {
+  (async () => {
+    const start = Date.now(); // 処理時間の計測用
+    const browser = await puppeteer.launch({
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+        '--no-first-run',
+        '--no-sandbox',
+        '--no-zygote',
+      ],
+    });
+    const page = await browser.newPage();
+
+    //不要なリソースを abort
+    await page.setRequestInterception(true);
+    page.on('request', (request) => {
+      if (
+        [
+          // 'fetch',
+          'xhr',
+          // 'script',
+          'texttrack',
+          'eventsource',
+          'websocket',
+          'manifest',
+          'other',
+          'media',
+          'font',
+          // 'image',
+          'stylesheet',
+        ].includes(request.resourceType())
+      ) {
+        request.abort();
+      } else {
+        request.continue();
+      }
+    });
+
+    const titleSelector = '.sc-150v5lj-0.hbRPmC';
+    const anchorSelector = '.sc-2695pe-0.fJifex > .sc-1kpyy02-0.ksxvFG > a';
+    const imgSelector = '.sc-1dphr7g-1.gjJgmD > img';
+    const priceSelector = '.sc-150v5lj-0.yfgtrh-0.kLLSiB';
+    const url =
+      'https://www.gu-global.com/jp/ja/category/women?page=1&saleTypes=price_down&sortOption=release_desc';
+
+    const dataArr = await getData(
+      page,
+      url,
+      titleSelector,
+      anchorSelector,
+      imgSelector,
+      priceSelector
+    );
+
+    await browser.close();
+    await res.json(dataArr);
     console.log('Took', Date.now() - start, 'ms');
   })();
 });
