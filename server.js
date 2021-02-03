@@ -27,7 +27,7 @@ async function getData(
       const getElm = (targetArray, targetElement, key) => {
         const result = [];
         targetArray.forEach((elm) => {
-          let item = {
+          const item = {
             [key]: elm[targetElement],
           };
           result.push(item);
@@ -51,7 +51,7 @@ async function getData(
       //タイトル配列とリンク配列,画像配列をマージ
       const data = [];
       for (let index = 0; index < titles.length; index++) {
-        let item = {
+        const item = {
           ...titles[index],
           ...links[index],
           ...imgs[index],
