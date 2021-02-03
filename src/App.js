@@ -25,7 +25,7 @@ const dataArr = [
     href: './uniqlo',
     src: uniqlo,
     lat: 36.536616,
-    lang: 136.597825,
+    lng: 136.597825,
     distance: '1.2 km', //表示テスト用の値
   },
   {
