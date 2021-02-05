@@ -289,10 +289,10 @@ app.get('/api/gu/men', (req, res) => {
       }
     });
 
-    const titleSelector = '.sc-150v5lj-0.hbRPmC';
-    const anchorSelector = '.sc-2695pe-0.fJifex > .sc-1kpyy02-0.ksxvFG > a';
-    const imgSelector = '.sc-1dphr7g-1.gjJgmD > img';
-    const priceSelector = '.sc-150v5lj-0.yfgtrh-0.kLLSiB';
+    const titleSelector = '.sc-150v5lj-0.dcsCKc';
+    const anchorSelector = '.sc-1krsg8w-0.jQZwvY';
+    const imgSelector = '.sc-1dphr7g-0.jsAknO > img';
+    const priceSelector = '.sc-150v5lj-0.yfgtrh-0.bNsGlD';
     const url =
       'https://www.gu-global.com/jp/ja/category/men?page=1&saleTypes=price_down&sortOption=release_desc';
 
@@ -352,10 +352,10 @@ app.get('/api/gu/women', (req, res) => {
       }
     });
 
-    const titleSelector = '.sc-150v5lj-0.hbRPmC';
-    const anchorSelector = '.sc-2695pe-0.fJifex > .sc-1kpyy02-0.ksxvFG > a';
-    const imgSelector = '.sc-1dphr7g-1.gjJgmD > img';
-    const priceSelector = '.sc-150v5lj-0.yfgtrh-0.kLLSiB';
+    const titleSelector = '.sc-150v5lj-0.dcsCKc';
+    const anchorSelector = '.sc-1krsg8w-0.jQZwvY';
+    const imgSelector = '.sc-1dphr7g-0.jsAknO > img';
+    const priceSelector = '.sc-150v5lj-0.yfgtrh-0.bNsGlD';
     const url =
       'https://www.gu-global.com/jp/ja/category/women?page=1&saleTypes=price_down&sortOption=release_desc';
 
