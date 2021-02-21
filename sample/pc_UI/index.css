@@ -1,0 +1,51 @@
+/* @charset "UTF-8"; */
+body{
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+nav {
+    background-color: blue;
+    font-size: 30px;
+    color: white;
+
+}
+
+.ptitle {
+    margin: 0 0 0 20px;
+    float: left;
+}
+
+.gnav {
+     margin: 0 0 0 0;
+     float: right;
+}
+
+ul li {
+    float: right;
+    list-style: none;
+    margin-right: 15px;
+}
+
+select {
+    font-size: 25px;
+    height: 35px;
+    width: 200px;
+    margin-right: 150px;
+}
+table {
+    margin-right: 100px;
+}
+input {
+    height: 30px;
+    width: 200px;
+}
+.photo1 {
+    margin: 20px 70px 20px 50px;
+}
+.photo2 {
+    margin: 20px 0 20px 0;
+}
+.photo3 {
+    margin: 10px 10px 10px 50px;
+}
